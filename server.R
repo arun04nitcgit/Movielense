@@ -5,12 +5,13 @@ movies <- movies[with(movies, order(title)), ]
 ratings <- read.csv("ratings100k.csv", header = TRUE)
 
 shinyServer(function(input, output) {
-  
-  # Text for the 3 boxes showing average scores
-    formulaText1 <- reactive({
+# Text for the 3 boxes showing average scores
+
+  formulaText1 <- reactive({
       paste(input$select)
     })
-    formulaText2 <- reactive({
+  
+  formulaText2 <- reactive({
       paste(input$select2)
     })
     formulaText3 <- reactive({
